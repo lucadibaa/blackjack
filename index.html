@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="#">
+        <!-- CSS File-->
+        <link rel="stylesheet" href="stylesheet.css">
+        <title>Blackjack | lucadibaa</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <h2>Blackjack</h2>
+            <h3><span id="bj-result">Let's Play</span></h3>
+
+            <div class="flex flex-cl row-1">
+                <div id="you">
+                    <h3>You: <span id="your-bj-score">0</span></h3>
+                </div>
+                <div id="dealer">
+                    <h3>Dealer: <span id="dealer-bj-score">0</span></h3>
+                </div>
+            </div>
+
+            <div class="flex row-2">
+                <div>
+                    <button class="hit-btn" id="hit">Hit</button>
+                    <button class="stand-btn" id="stand">Stand</button>
+                    <button class="deal-btn" id="deal">Deal</button>
+                </div>
+            </div>
+
+            <div class="flex">
+                <table>
+                    <tr>
+                        <th>Wins</th>
+                        <th>Losses</th>
+                        <th>Draws</th>
+                    </tr>
+                    <tr>
+                        <td><span id="wins">0</span></td>
+                        <td><span id="losses">0</span></td>
+                        <td><span id="draws">0</span></td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer grid">
+                <div class="l-footer">
+                    <p>This is one of lucadibaa's projects. Visit <a href="">lucadibaa.github.io</a> to see more.</p>
+                </div>
+                <div class="r-footer">
+                    <h5>Other Projects :</h5>
+                    <ul class="f-grid">
+                        <li><a href="https://lucadibaa-howoldareyou-project.netlify.app/">How Old Are You</a></li>
+                        <li><a href="https://lucadibaa-blackjack-project.netlify.app/">Blackjack</a></li>
+                        <li><a href="https://lucadibaa-snake-project.netlify.app/">Snake</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Script -->
+        <script src="script.js"></script>
+    </body>
+</html>

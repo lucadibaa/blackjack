@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    background-color: #888;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.container {
+    max-width: 1100px;
+    width: 75%;
+    margin: 30px auto;
+    overflow: auto;
+    padding: 30px;
+    border: 2px solid #111;
+    text-align: center;
+}
+
+.flex {
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+
+h3 {
+    font-size: 1.9rem;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* You & Dealer */
+
+.row-1, .row-2 {
+    background: url(images/poker2.jpg);
+    background-size: cover;
+    object-fit: fill;
+    border: 1px solid #000;
+}
+
+.row-1 div {
+    height: 400px;
+    text-align: center;
+    flex: 1;
+}
+
+#you {
+    border-right: 1px solid #111;
+}
+
+#dealer {
+    border-left: 1px solid #111;
+}
+
+.row-1 img { /* useless */
+    width: 25%;
+    padding: 10px;
+}
+
+/* Table */
+
+table {
+    margin-top: 30px;
+}
+
+table, th, td {
+    border: 1px solid #222;
+    padding: 5px;
+    border-collapse: collapse;
+}
+
+/* Buttons */
+
+.hit-btn {
+    padding: 12px 25px;
+    outline: none;
+    border-radius: .5rem;
+    background-color: #2e6bc7;
+    color: #111;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform .15s ease-in-out,
+                background .2s ease-in-out,
+                border .3s ease-in-out;;
+    margin-right: 15px;
+    border: 2px solid transparent;
+}
+
+.stand-btn {
+    padding: 12px 25px;
+    outline: none;
+    border-radius: .5rem;
+    background-color: #eed706;
+    color: #111;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform .15s ease-in-out,
+                background .2s ease-in-out,
+                border .3s ease-in-out;;
+    margin-right: 15px;
+    border: 2px solid transparent;
+}
+
+.deal-btn {
+    padding: 12px 25px;
+    outline: none;
+    border-radius: .5rem;
+    background-color: #cf1c0c;
+    color: #111;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform .15s ease-in-out,
+                background .2s ease-in-out,
+                border .3s ease-in-out;
+    border: 2px solid transparent;
+}
+
+.hit-btn:hover, .stand-btn:hover, .deal-btn:hover {
+    transform: scale(.98);
+    background: transparent;
+}
+
+.hit-btn:hover {
+    border: 2px solid #006;
+}
+
+.stand-btn:hover {
+    border: 2px solid #ffd103;
+}
+
+.deal-btn:hover {
+    border: 2px solid #970303;
+}
+
+/* Footer */
+
+footer {
+    height: 200px;
+    background-color: #111;
+    color: #fff;
+    margin-top: auto;
+    padding: 0px 50px;
+}
+
+.l-footer {
+    width: 50%;
+    font-size: 1.1rem;
+    align-self: center;
+}
+
+.r-footer {
+    justify-self: flex-end;
+    font-size: 1.1rem;
+    padding: 20px 100px;
+}
+
+footer a:hover {
+    color: #ff6600;
+}
+
+/* Responsive Website */
+
+@media(max-width: 830px) {
+    .container {
+        width: 90%;
+    }
+    #you img, #dealer img {
+        width: 90px;
+    }
+    .row-1 div {
+        height: 450px;
+    }
+}
+
+@media(max-width: 550px) {
+    .container {
+        width: 98%;
+        border: none;
+    }
+    .flex-cl {
+        display: flex;
+        flex-direction: column;
+    }
+    #you img, #dealer img {
+        width: 90px;
+    }
+    .row-1 div {
+        min-height: 200px;
+    }
+    #you {
+        border-right: none;
+    }
+    
+    #dealer {
+        border-left: none;
+        border-top: 1px solid #000;
+    }
+}
+
+@media(max-width: 450px) {
+    .container {
+        margin-bottom: 5px;
+        padding-bottom: 10px;
+    }
+    #you img, #dealer img {
+        width: 100px;
+    }
+    .row-1 div {
+        min-height: 220px;
+    }
+    .hit-btn {
+        margin-right: 10px;
+    }
+    
+    .stand-btn {
+        margin-right: 0;
+    }
+    
+    .deal-btn {
+        margin-top: 10px;
+    }
+}
+
+/* Responsive Footer */
+@media (max-width: 1000px) {
+    .r-footer {
+        padding: 10px 60px;
+    }
+    footer {
+        height: 150px;
+    }
+}
+
+@media(max-width: 850px) {
+    .r-footer {
+        padding: 10px 40px;
+    }
+    footer {
+        height: 170px;
+    }
+}
+
+@media(max-width: 700px) {
+    .r-footer {
+        padding: 10px;
+    }
+    footer {
+        height: 170px;
+    }
+}
+
+@media(max-width: 610px) {
+    footer {
+        height: 180px;
+    }
+    .l-footer {
+        width: 70%;
+        padding: 10px;
+    }
+}
+
+@media(max-width: 530px) {
+    footer {
+        height: 210px;
+    }
+    .l-footer {
+        width: 100%;
+        padding: 10px;
+    }
+    .r-footer {
+        justify-self: center;
+        padding: 10px;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+    .f-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .r-footer {
+        text-align: center;
+    }
+    li {
+        padding-top: 5px;
+    }
+}
+
+@media(max-width: 450px) {
+    footer {
+        height: 220px;
+    }
+    .r-footer {
+        padding: 0;
+    }
+}
+
+@media(max-width: 370px) {
+    footer {
+        height: 250px;
+    }
+    .f-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
